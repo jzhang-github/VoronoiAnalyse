@@ -31,7 +31,7 @@ class VoronoiAnalyse(object):
         Therefore, this is the start. For python, the index starts from zero.
     end_index : int
         This is the end of index. If you want include the 100th atom, the end
-        index should be 101.
+        index should be 100.
     """
     def __init__(self,
                  file_name,
