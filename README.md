@@ -1,5 +1,5 @@
 # VoronoiAnalyse
-This script is used to calculate the voronoi volume of each sites in a crystal.
+## This script is used to calculate the voronoi volume of each sites in a crystal.
 
 
 The cutoff threhold shoule be modified in some cases. 
