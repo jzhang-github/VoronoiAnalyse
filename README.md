@@ -6,7 +6,7 @@ The cutoff threhold shoule be modified in some cases.
 
 ## How to use this code?
 ```markdown
-python get_voronoi_volume.py
+python get_voronoi_volume.py POSCAR 0 32 # Print a list of Voronoi volumes from the first atom to the 32^th^ atom.
 ```
 
 ## Note:
