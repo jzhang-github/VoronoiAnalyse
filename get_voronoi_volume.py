@@ -7,12 +7,22 @@ Created on Fri May 14 10:15:55 2021
 Emain: j.zhang@my.cityu.edu.hk
 
 This script is used to calculate the voronoi volume of each sites in a crystal.
+
+20210619. update.
 """
 
 from pymatgen.core.structure import Structure
 import numpy as np
 from scipy.spatial import ConvexHull
 from scipy.spatial import Voronoi
+import os
+from sys import argv
+
+# =============================================================================
+if len(argv) < 4 or '-h' in argv:
+    print("\n"+"Usage: Command + FileName + Start_index + End_index")
+    os._exit(0)
+# =============================================================================
 
 class VoronoiAnalyse(object):
     """
@@ -94,7 +104,8 @@ class VoronoiAnalyse(object):
         return vor_vol, error
 
 if __name__ == '__main__':
-    vor_crystal = VoronoiAnalyse('POSCAR.txt', 0, 32)
+    fname_argv,start_argv, end_argv= argv[1:4]
+    vor_crystal = VoronoiAnalyse(fname_argv, start_argv, end_argv)
     vor_vol, error = vor_crystal()
     for i in range(len(vor_vol)):
         print(i, flush=True)
