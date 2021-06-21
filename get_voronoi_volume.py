@@ -105,9 +105,9 @@ class VoronoiAnalyse(object):
 
 if __name__ == '__main__':
     fname_argv,start_argv, end_argv= argv[1:4]
-    vor_crystal = VoronoiAnalyse(fname_argv, start_argv, end_argv)
+    vor_crystal = VoronoiAnalyse(fname_argv, int(start_argv), int(end_argv))
     vor_vol, error = vor_crystal()
     for i in range(len(vor_vol)):
-        print(i, flush=True)
+        print(vor_vol[i], flush=True)
     print('Error:', error)
 
